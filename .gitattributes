@@ -1,0 +1,330 @@
+# Автоопределение текстовых файлов
+* text=auto
+
+# =============================================================================
+# ИСХОДНЫЙ КОД C++
+# =============================================================================
+
+# C++ исходники
+*.c text diff=cpp eol=lf
+*.cc text diff=cpp eol=lf
+*.cpp text diff=cpp eol=lf
+*.cxx text diff=cpp eol=lf
+*.c++ text diff=cpp eol=lf
+
+# C++ заголовки
+*.h text diff=cpp eol=lf
+*.hpp text diff=cpp eol=lf
+*.hh text diff=cpp eol=lf
+*.hxx text diff=cpp eol=lf
+*.h++ text diff=cpp eol=lf
+*.inl text diff=cpp eol=lf
+*.ipp text diff=cpp eol=lf
+*.tpp text diff=cpp eol=lf
+
+# Inline и template файлы
+*.inc text diff=cpp eol=lf
+
+# =============================================================================
+# CMAKE И СБОРКА
+# =============================================================================
+CMakeLists.txt text eol=lf
+*.cmake text eol=lf
+*.cmake.in text eol=lf
+
+# Makefile
+Makefile text eol=lf
+*.mk text eol=lf
+*.make text eol=lf
+
+# vcpkg
+vcpkg.json text eol=lf linguist-language=JSON
+vcpkg-configuration.json text eol=lf
+
+# =============================================================================
+# КОНФИГУРАЦИОННЫЕ ФАЙЛЫ
+# =============================================================================
+
+# JSON
+*.json text eol=lf linguist-language=JSON
+
+# YAML
+*.yml text eol=lf linguist-language=YAML
+*.yaml text eol=lf linguist-language=YAML
+
+# XML
+*.xml text eol=lf
+*.svg text eol=lf
+
+# TOML
+*.toml text eol=lf
+
+# INI
+*.ini text eol=lf
+*.cfg text eol=lf
+*.conf text eol=lf
+*.config text eol=lf
+
+# =============================================================================
+# ДОКУМЕНТАЦИЯ
+# =============================================================================
+
+# Markdown
+*.md text eol=lf linguist-documentation
+*.markdown text eol=lf linguist-documentation
+
+# Text файлы
+*.txt text eol=lf
+README text eol=lf
+LICENSE text eol=lf
+AUTHORS text eol=lf
+CHANGELOG text eol=lf
+CONTRIBUTING text eol=lf
+
+# RestructuredText
+*.rst text eol=lf linguist-documentation
+
+# Doxygen
+Doxyfile text eol=lf
+*.dox text eol=lf
+
+# =============================================================================
+# СКРИПТЫ
+# =============================================================================
+
+# Shell
+*.sh text eol=lf
+*.bash text eol=lf
+*.zsh text eol=lf
+
+# Batch (Windows)
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# PowerShell
+*.ps1 text eol=crlf
+*.psm1 text eol=crlf
+
+# Python
+*.py text eol=lf diff=python
+
+# =============================================================================
+# GIT КОНФИГУРАЦИЯ
+# =============================================================================
+.gitattributes text eol=lf
+.gitignore text eol=lf
+.gitmodules text eol=lf
+.gitkeep text eol=lf
+
+# =============================================================================
+# IDE И РЕДАКТОРЫ
+# =============================================================================
+
+# EditorConfig
+.editorconfig text eol=lf
+
+# Clang-format
+.clang-format text eol=lf
+.clang-tidy text eol=lf
+
+# Clangd
+.clangd text eol=lf
+
+# VS Code
+*.code-workspace text eol=lf
+
+# Visual Studio
+*.sln text eol=crlf merge=union
+*.csproj text eol=crlf merge=union
+*.vbproj text eol=crlf merge=union
+*.vcxproj text eol=crlf merge=union
+*.vcproj text eol=crlf merge=union
+*.dbproj text eol=crlf merge=union
+*.fsproj text eol=crlf merge=union
+*.lsproj text eol=crlf merge=union
+*.wixproj text eol=crlf merge=union
+*.modelproj text eol=crlf merge=union
+*.sqlproj text eol=crlf merge=union
+*.wwaproj text eol=crlf merge=union
+*.filters text eol=crlf
+*.vcxproj.user text eol=crlf
+
+# =============================================================================
+# ДАННЫЕ И РЕЗУЛЬТАТЫ (специфично для Field Analyzer)
+# =============================================================================
+
+# CSV данные (не изменять окончания строк!)
+*.csv text eol=lf
+*.tsv text eol=lf
+
+# Геопространственные метаданные
+*.prj text eol=lf
+*.wkt text eol=lf
+*.aux.xml text eol=lf
+
+# Логи (важно сохранять как есть)
+*.log text
+
+# =============================================================================
+# ИЗОБРАЖЕНИЯ (BINARY)
+# =============================================================================
+
+# Растровые изображения
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.bmp binary
+*.ico binary
+*.webp binary
+
+# Векторные изображения (SVG - text)
+*.svg text eol=lf
+
+# =============================================================================
+# ГЕОПРОСТРАНСТВЕННЫЕ ДАННЫЕ (BINARY)
+# =============================================================================
+
+# GeoTIFF и TIFF
+*.tif binary
+*.tiff binary
+*.geotiff binary
+*.gtiff binary
+
+# JPEG2000 (Sentinel-2)
+*.jp2 binary
+*.j2k binary
+*.jpx binary
+
+# ERDAS IMAGINE
+*.img binary
+*.ige binary
+
+# ESRI Shape files
+*.shp binary
+*.shx binary
+*.dbf binary
+
+# HDF
+*.hdf binary
+*.hdf4 binary
+*.hdf5 binary
+*.h5 binary
+
+# NetCDF
+*.nc binary
+*.nc4 binary
+
+# GDAL VRT (виртуальные датасеты - text!)
+*.vrt text eol=lf
+
+# =============================================================================
+# АРХИВЫ (BINARY)
+# =============================================================================
+*.zip binary
+*.tar binary
+*.gz binary
+*.bz2 binary
+*.xz binary
+*.7z binary
+*.rar binary
+*.tgz binary
+
+# =============================================================================
+# СКОМПИЛИРОВАННЫЕ ФАЙЛЫ (BINARY)
+# =============================================================================
+
+# Объектные файлы
+*.o binary
+*.obj binary
+*.ko binary
+
+# Статические библиотеки
+*.a binary
+*.lib binary
+
+# Динамические библиотеки
+*.so binary
+*.dll binary
+*.dylib binary
+
+# Исполняемые файлы
+*.exe binary
+*.out binary
+*.app binary
+
+# Precompiled headers
+*.gch binary
+*.pch binary
+
+# =============================================================================
+# СПЕЦИАЛЬНЫЕ ПРАВИЛА GIT LFS (если используется)
+# =============================================================================
+
+# Большие геопространственные файлы (рекомендуется Git LFS)
+# Раскомментируйте если используете Git LFS:
+
+# *.tif filter=lfs diff=lfs merge=lfs -text
+# *.tiff filter=lfs diff=lfs merge=lfs -text
+# *.jp2 filter=lfs diff=lfs merge=lfs -text
+# *.hdf filter=lfs diff=lfs merge=lfs -text
+# *.hdf5 filter=lfs diff=lfs merge=lfs -text
+# *.nc filter=lfs diff=lfs merge=lfs -text
+
+# =============================================================================
+# ПРАВИЛА ЭКСПОРТА
+# =============================================================================
+
+# Файлы, которые не должны попадать в архив при git archive
+.gitattributes export-ignore
+.gitignore export-ignore
+.gitmodules export-ignore
+.github/ export-ignore
+.vscode/ export-ignore
+.idea/ export-ignore
+tests/ export-ignore
+docs/ export-ignore
+*.md export-ignore
+
+# =============================================================================
+# ПРАВИЛА MERGE
+# =============================================================================
+
+# Бинарные файлы - не пытаться мержить
+*.png binary -merge
+*.jpg binary -merge
+*.tif binary -merge
+*.jp2 binary -merge
+
+# Генерируемые файлы - использовать "ours" при конфликте
+*.vcxproj.filters merge=union
+CMakeCache.txt merge=ours
+
+# =============================================================================
+# ПРАВИЛА DIFF
+# =============================================================================
+
+# Python
+*.py diff=python
+
+# C++
+*.cpp diff=cpp
+*.h diff=cpp
+
+# Markdown
+*.md diff=markdown
+
+# =============================================================================
+# LINGUIST (для статистики GitHub)
+# =============================================================================
+
+# Исключить из статистики языков
+/tests/** linguist-vendored
+/docs/** linguist-documentation
+*.md linguist-documentation
+/build/** linguist-generated
+/vcpkg_installed/** linguist-vendored
+
+# Указать язык явно
+*.cmake linguist-language=CMake
+*.h linguist-language=C++
