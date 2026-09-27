@@ -2,24 +2,26 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "C++: Debug (Active Preset)",
+      "name": "C++: Debug (MSVC)",
       "type": "cppvsdbg",
       "request": "launch",
-      "program": "${command:cmake.launchTargetPath}",
+      "program": "${workspaceFolder}/build/msvc/Debug/cpp-study-template.exe",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
-      "console": "integratedTerminal"
+      "console": "integratedTerminal",
+      "preLaunchTask": "CMake: build debug"
     },
     {
-      "name": "C++: Release (Manual Path)",
+      "name": "C++: Release (MSVC)",
       "type": "cppvsdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/build/msvc-release/Release/cpp-study-template.exe",
+      "program": "${workspaceFolder}/build/msvc/Release/cpp-study-template.exe",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
-      "console": "integratedTerminal"
+      "console": "integratedTerminal",
+      "preLaunchTask": "CMake: build release"
     }
   ]
 }

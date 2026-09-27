@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 
-
 std::string seriesSum(int n)
 {
     if (n == 0) { return "0.00"; }
@@ -13,7 +12,6 @@ std::string seriesSum(int n)
     }
     return std::to_string(x);
 }
-
 
 int main()
 {

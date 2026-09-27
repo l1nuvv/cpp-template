@@ -19,14 +19,12 @@ ReferenceAlignment: Left
 
 AlignConsecutiveAssignments: false
 AlignConsecutiveDeclarations: false
-
 AllowShortBlocksOnASingleLine: Always
 AllowShortFunctionsOnASingleLine: All
 AllowShortIfStatementsOnASingleLine: AllIfsAndElse
 AllowShortLambdasOnASingleLine: All
 AllowShortCaseLabelsOnASingleLine: true
 AllowShortEnumsOnASingleLine: false
-
 BreakBeforeBraces: Custom
 BraceWrapping:
   AfterCaseLabel: true
@@ -48,7 +46,6 @@ BraceWrapping:
   SplitEmptyNamespace: true
 
 BreakTemplateDeclarations: Yes
-
 BreakConstructorInitializers: AfterColon
 PackConstructorInitializers: CurrentLine
 ConstructorInitializerIndentWidth: 4
@@ -73,7 +70,6 @@ IncludeCategories:
     Priority: 3
 
 IncludeIsMainRegex: '([-_](test|unittest))?$'
-
 FixNamespaceComments: true
 ReflowComments: true
 SeparateDefinitionBlocks: Leave

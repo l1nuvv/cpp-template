@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.2) # Синхронизируем с вашим CMakePresets.json
+cmake_minimum_required(VERSION 4.2)
 
 project(
   cpp_study_template
@@ -6,29 +6,33 @@ project(
   LANGUAGES CXX
 )
 
+option(
+  CPP_STUDY_WARNINGS_AS_ERRORS
+  "Treat compiler warnings as errors"
+  OFF
+)
 
-option(CPP_STUDY_WARNINGS_AS_ERRORS "Treat compiler warnings as errors" OFF)
-
-
-# Создаем исполняемый файл
 add_executable(cpp-study-template
   src/main.cpp
 )
 
-target_compile_features(cpp-study-template PRIVATE cxx_std_20)
+target_compile_features(cpp-study-template
+  PRIVATE
+    cxx_std_20
+)
 
 set_target_properties(cpp-study-template PROPERTIES
-  CXX_EXTENSIONS NO
-  CPP_STUDY_WARNINGS_AS_ERRORS ${CPP_STUDY_WARNINGS_AS_ERRORS}
+  CXX_EXTENSIONS OFF
+  COMPILE_WARNING_AS_ERROR ${CPP_STUDY_WARNINGS_AS_ERRORS}
 )
 
 if(MSVC)
   target_compile_options(cpp-study-template
     PRIVATE
-      /W4          # Высокий уровень предупреждений
-      /permissive- # Строгое соответствие стандарту
+      /W4
+      /permissive-
       /Zc:__cplusplus
-      /utf-8       # Корректная кодировка
+      /utf-8
   )
 elseif(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
   target_compile_options(cpp-study-template
