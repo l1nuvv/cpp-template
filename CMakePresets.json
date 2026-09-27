@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 6,
   "cmakeMinimumRequired": {
     "major": 4,
     "minor": 2,
@@ -7,37 +7,22 @@
   },
   "configurePresets": [
     {
-      "name": "msvc-base",
-      "hidden": true,
+      "name": "msvc",
       "generator": "Visual Studio 18 2026",
       "architecture": "x64",
-      "binaryDir": "${sourceDir}/build/${presetName}"
-    },
-    {
-      "name": "msvc-debug",
-      "displayName": "MSVC 2026 Debug",
-      "inherits": "msvc-base",
-      "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug"
-      }
-    },
-    {
-      "name": "msvc-release",
-      "displayName": "MSVC 2026 Release",
-      "inherits": "msvc-base",
-      "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Release"
-      }
+      "binaryDir": "${sourceDir}/build/msvc"
     }
   ],
   "buildPresets": [
     {
       "name": "msvc-debug",
+      "displayName": "MSVC Debug",
       "configurePreset": "msvc-debug",
       "configuration": "Debug"
     },
     {
       "name": "msvc-release",
+      "displayName": "MSVC Release",
       "configurePreset": "msvc-release",
       "configuration": "Release"
     }
